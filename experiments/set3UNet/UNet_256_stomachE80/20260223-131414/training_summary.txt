@@ -1,0 +1,1 @@
+New best mIoU: 0.5366. Model params: 30.76M train_loss=0.0464 val_loss=0.3051 mIoU=0.5159 mDice~=0.6002MASD=17.4801 NSD=0.4888

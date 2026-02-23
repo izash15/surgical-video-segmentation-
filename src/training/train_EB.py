@@ -11,8 +11,8 @@ import numpy as np
 import csv, json, time
 from datetime import datetime
 
-from models.tripath import TriPathUNet,TriPathUNetStacked,TriPathDSConv,TriPathCNN,TriPathDC
-from models.segformer import SegFormer
+# from models.tripath import TriPathUNet,TriPathUNetStacked,TriPathDSConv,TriPathCNN,TriPathDC
+# from models.segformer import SegFormer
 from models.unet import UNet
 from data.dsad_dataset import DSADDataset
 from utils.metrics import DiceCELoss, compute_confusion_matrix, iou_from_cm, dice_from_logits,compute_surface_metrics_batch  
@@ -124,8 +124,8 @@ def main():
     ####### !!!!Change Network here
     # net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32) 
     # net = SegFormer(num_classes=args.num_classes, variant="b2")
-    net = TriPathDC(in_ch=3, num_classes=args.num_classes, base_ch=32)
-    #net = UNet(in_ch=3, num_classes=args.num_classes, base_ch=64) 
+    # net = TriPathDC(in_ch=3, num_classes=args.num_classes, base_ch=32)
+    net = UNet(in_ch=3, num_classes=args.num_classes, base_ch=64) 
     net.to(device)
     print(f"Model params: {count_trainable_parameters(net)/1e6:.2f}M")
 

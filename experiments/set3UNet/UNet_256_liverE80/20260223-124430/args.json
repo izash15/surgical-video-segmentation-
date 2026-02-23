@@ -1,0 +1,24 @@
+{
+  "amp": false,
+  "batch_size": 16,
+  "data_root": "/home/rmosad/DSAD_pped/set3/liver",
+  "epochs": 80,
+  "ignore_bg": false,
+  "images_subdir": "images",
+  "img_size": [
+    256,
+    256
+  ],
+  "list_train": "/home/rmosad/DSAD_pped/set3/liver/splits/train.txt",
+  "list_val": "/home/rmosad/DSAD_pped/set3/liver/splits/val.txt",
+  "log_interval": 0,
+  "lr": 0.0001,
+  "masks_subdir": "masks",
+  "num_classes": 2,
+  "num_workers": 4,
+  "run_name": "20260223-124430",
+  "save_dir": "/home/rmosad/surgical-video-segmentation-/experiments/set3UNet/UNet_256_liverE80",
+  "seed": 42,
+  "val_split": 0.1,
+  "weight_decay": 0.001
+}
