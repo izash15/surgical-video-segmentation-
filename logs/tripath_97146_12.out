@@ -1,0 +1,117 @@
+Organ: vesicular_glands
+Host: gpuhuang
+Python: /home/rmosad/.conda/envs/svs2/bin/python
+GPU:
+Mon Mar  2 16:48:12 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.51.03              Driver Version: 575.51.03      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    Off |   00000000:0B:00.0 Off |                    0 |
+| N/A   33C    P8             48W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+mmcv + TriPathUNetStacked import OK
+Model params: 24.99M
+[epoch 1] train_loss=0.7632 val_loss=0.6961 mIoU=0.1014 mDice~=0.1580 MASD=42.0676 NSD=0.0829
+** New best mIoU: 0.1014. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 2] train_loss=0.6318 val_loss=0.6207 mIoU=0.1563 mDice~=0.2264 MASD=35.2611 NSD=0.1261
+** New best mIoU: 0.1563. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 3] train_loss=0.5697 val_loss=0.5880 mIoU=0.1923 mDice~=0.2819 MASD=27.9614 NSD=0.1639
+** New best mIoU: 0.1923. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 4] train_loss=0.5205 val_loss=0.5554 mIoU=0.1844 mDice~=0.2704 MASD=28.7822 NSD=0.1692
+[epoch 5] train_loss=0.4729 val_loss=0.5270 mIoU=0.2265 mDice~=0.3273 MASD=29.5786 NSD=0.1928
+** New best mIoU: 0.2265. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 6] train_loss=0.4383 val_loss=0.4843 mIoU=0.2606 mDice~=0.3611 MASD=26.4825 NSD=0.2270
+** New best mIoU: 0.2606. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 7] train_loss=0.3991 val_loss=0.5052 mIoU=0.1990 mDice~=0.2810 MASD=28.5107 NSD=0.1770
+[epoch 8] train_loss=0.3705 val_loss=0.5183 mIoU=0.1766 mDice~=0.2489 MASD=32.3066 NSD=0.1682
+[epoch 9] train_loss=0.3403 val_loss=0.4742 mIoU=0.2299 mDice~=0.3221 MASD=26.0388 NSD=0.2007
+[epoch 10] train_loss=0.3057 val_loss=0.4274 mIoU=0.2882 mDice~=0.3899 MASD=22.6366 NSD=0.2551
+** New best mIoU: 0.2882. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 11] train_loss=0.2968 val_loss=0.4641 mIoU=0.2387 mDice~=0.3274 MASD=28.1007 NSD=0.2085
+[epoch 12] train_loss=0.2734 val_loss=0.4593 mIoU=0.2409 mDice~=0.3309 MASD=25.6150 NSD=0.2231
+[epoch 13] train_loss=0.2666 val_loss=0.4590 mIoU=0.2416 mDice~=0.3368 MASD=27.5165 NSD=0.2316
+[epoch 14] train_loss=0.2382 val_loss=0.4354 mIoU=0.2773 mDice~=0.3765 MASD=22.9193 NSD=0.2692
+[epoch 15] train_loss=0.2334 val_loss=0.4377 mIoU=0.2792 mDice~=0.3850 MASD=22.1458 NSD=0.2512
+[epoch 16] train_loss=0.2183 val_loss=0.4581 mIoU=0.2562 mDice~=0.3502 MASD=25.0127 NSD=0.2252
+[epoch 17] train_loss=0.2133 val_loss=0.4395 mIoU=0.2752 mDice~=0.3733 MASD=22.3679 NSD=0.2737
+[epoch 18] train_loss=0.1983 val_loss=0.4516 mIoU=0.2544 mDice~=0.3435 MASD=22.7589 NSD=0.2582
+[epoch 19] train_loss=0.1978 val_loss=0.4363 mIoU=0.2877 mDice~=0.3913 MASD=24.9299 NSD=0.2734
+[epoch 20] train_loss=0.1782 val_loss=0.4788 mIoU=0.2330 mDice~=0.3234 MASD=30.5878 NSD=0.2408
+[epoch 21] train_loss=0.1746 val_loss=0.4590 mIoU=0.2584 mDice~=0.3471 MASD=24.0098 NSD=0.2553
+[epoch 22] train_loss=0.1713 val_loss=0.4489 mIoU=0.2633 mDice~=0.3566 MASD=27.7009 NSD=0.2578
+[epoch 23] train_loss=0.1672 val_loss=0.4720 mIoU=0.2371 mDice~=0.3218 MASD=27.6752 NSD=0.2312
+[epoch 24] train_loss=0.1555 val_loss=0.4352 mIoU=0.2922 mDice~=0.3927 MASD=25.5963 NSD=0.2922
+** New best mIoU: 0.2922. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 25] train_loss=0.1540 val_loss=0.4571 mIoU=0.2627 mDice~=0.3616 MASD=25.1397 NSD=0.2646
+[epoch 26] train_loss=0.1521 val_loss=0.4239 mIoU=0.3014 mDice~=0.4067 MASD=21.5863 NSD=0.3095
+** New best mIoU: 0.3014. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 27] train_loss=0.1385 val_loss=0.4433 mIoU=0.2851 mDice~=0.3839 MASD=22.6719 NSD=0.2937
+[epoch 28] train_loss=0.1331 val_loss=0.4360 mIoU=0.2840 mDice~=0.3825 MASD=22.4235 NSD=0.2803
+[epoch 29] train_loss=0.1278 val_loss=0.4180 mIoU=0.3132 mDice~=0.4157 MASD=22.7505 NSD=0.2924
+** New best mIoU: 0.3132. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+[epoch 30] train_loss=0.1291 val_loss=0.4556 mIoU=0.2698 mDice~=0.3601 MASD=21.7229 NSD=0.2643
+[epoch 31] train_loss=0.1267 val_loss=0.4513 mIoU=0.2870 mDice~=0.3859 MASD=25.9608 NSD=0.2785
+[epoch 32] train_loss=0.1239 val_loss=0.4623 mIoU=0.2622 mDice~=0.3521 MASD=26.6350 NSD=0.2675
+[epoch 33] train_loss=0.1152 val_loss=0.4356 mIoU=0.3008 mDice~=0.4009 MASD=25.5658 NSD=0.3014
+[epoch 34] train_loss=0.1107 val_loss=0.4486 mIoU=0.2964 mDice~=0.3957 MASD=24.6804 NSD=0.3048
+[epoch 35] train_loss=0.1048 val_loss=0.4511 mIoU=0.2780 mDice~=0.3735 MASD=20.8429 NSD=0.2831
+[epoch 36] train_loss=0.1020 val_loss=0.4571 mIoU=0.2778 mDice~=0.3732 MASD=20.7341 NSD=0.2834
+[epoch 37] train_loss=0.1030 val_loss=0.4490 mIoU=0.2920 mDice~=0.3927 MASD=22.9019 NSD=0.2914
+[epoch 38] train_loss=0.1027 val_loss=0.4722 mIoU=0.2590 mDice~=0.3478 MASD=24.6481 NSD=0.2571
+[epoch 39] train_loss=0.0998 val_loss=0.4608 mIoU=0.2710 mDice~=0.3606 MASD=25.1094 NSD=0.2713
+[epoch 40] train_loss=0.0973 val_loss=0.4457 mIoU=0.2906 mDice~=0.3877 MASD=23.0828 NSD=0.2924
+[epoch 41] train_loss=0.0949 val_loss=0.4275 mIoU=0.3091 mDice~=0.4133 MASD=21.9019 NSD=0.3052
+[epoch 42] train_loss=0.0881 val_loss=0.4815 mIoU=0.2605 mDice~=0.3477 MASD=24.4582 NSD=0.2635
+[epoch 43] train_loss=0.0872 val_loss=0.4538 mIoU=0.2835 mDice~=0.3806 MASD=23.7503 NSD=0.2834
+[epoch 44] train_loss=0.0837 val_loss=0.4529 mIoU=0.2859 mDice~=0.3811 MASD=22.5751 NSD=0.2778
+[epoch 45] train_loss=0.0842 val_loss=0.4559 mIoU=0.2871 mDice~=0.3822 MASD=24.6588 NSD=0.2903
+[epoch 46] train_loss=0.0830 val_loss=0.4333 mIoU=0.3132 mDice~=0.4227 MASD=22.6877 NSD=0.3086
+[epoch 47] train_loss=0.0790 val_loss=0.4502 mIoU=0.3010 mDice~=0.4034 MASD=23.9292 NSD=0.3066
+[epoch 48] train_loss=0.0768 val_loss=0.4550 mIoU=0.2881 mDice~=0.3868 MASD=25.2950 NSD=0.2911
+[epoch 49] train_loss=0.0772 val_loss=0.4518 mIoU=0.2937 mDice~=0.3949 MASD=25.0937 NSD=0.2976
+[epoch 50] train_loss=0.0750 val_loss=0.4596 mIoU=0.2864 mDice~=0.3834 MASD=23.0792 NSD=0.2869
+[epoch 51] train_loss=0.0714 val_loss=0.4741 mIoU=0.2785 mDice~=0.3714 MASD=24.3377 NSD=0.2777
+[epoch 52] train_loss=0.0693 val_loss=0.4496 mIoU=0.3014 mDice~=0.4027 MASD=23.1921 NSD=0.3011
+[epoch 53] train_loss=0.0694 val_loss=0.4486 mIoU=0.2954 mDice~=0.3976 MASD=21.4647 NSD=0.2950
+[epoch 54] train_loss=0.0659 val_loss=0.4456 mIoU=0.2975 mDice~=0.3980 MASD=20.5804 NSD=0.2910
+[epoch 55] train_loss=0.0666 val_loss=0.4631 mIoU=0.2873 mDice~=0.3862 MASD=22.0334 NSD=0.2870
+[epoch 56] train_loss=0.0646 val_loss=0.4421 mIoU=0.3118 mDice~=0.4158 MASD=23.3553 NSD=0.3073
+[epoch 57] train_loss=0.0647 val_loss=0.4729 mIoU=0.2803 mDice~=0.3738 MASD=24.4288 NSD=0.2834
+[epoch 58] train_loss=0.0617 val_loss=0.4666 mIoU=0.2892 mDice~=0.3875 MASD=21.7222 NSD=0.2905
+[epoch 59] train_loss=0.0620 val_loss=0.4588 mIoU=0.2917 mDice~=0.3921 MASD=21.3801 NSD=0.2963
+[epoch 60] train_loss=0.0598 val_loss=0.4481 mIoU=0.3032 mDice~=0.4052 MASD=21.6667 NSD=0.3004
+[epoch 61] train_loss=0.0616 val_loss=0.4646 mIoU=0.2837 mDice~=0.3818 MASD=23.5460 NSD=0.2817
+[epoch 62] train_loss=0.0601 val_loss=0.4506 mIoU=0.3010 mDice~=0.4049 MASD=21.6415 NSD=0.3009
+[epoch 63] train_loss=0.0588 val_loss=0.4714 mIoU=0.2802 mDice~=0.3767 MASD=22.8224 NSD=0.2848
+[epoch 64] train_loss=0.0562 val_loss=0.4614 mIoU=0.2928 mDice~=0.3922 MASD=22.0243 NSD=0.2937
+[epoch 65] train_loss=0.0540 val_loss=0.4640 mIoU=0.2894 mDice~=0.3883 MASD=22.2296 NSD=0.2901
+[epoch 66] train_loss=0.0545 val_loss=0.4681 mIoU=0.2854 mDice~=0.3835 MASD=23.0444 NSD=0.2868
+[epoch 67] train_loss=0.0553 val_loss=0.4600 mIoU=0.2959 mDice~=0.3961 MASD=21.2256 NSD=0.2954
+[epoch 68] train_loss=0.0542 val_loss=0.4604 mIoU=0.2937 mDice~=0.3944 MASD=21.2014 NSD=0.2937
+[epoch 69] train_loss=0.0547 val_loss=0.4756 mIoU=0.2794 mDice~=0.3774 MASD=23.0518 NSD=0.2823
+[epoch 70] train_loss=0.0531 val_loss=0.4660 mIoU=0.2897 mDice~=0.3881 MASD=21.9799 NSD=0.2903
+[epoch 71] train_loss=0.0536 val_loss=0.4697 mIoU=0.2864 mDice~=0.3855 MASD=21.2339 NSD=0.2896
+[epoch 72] train_loss=0.0523 val_loss=0.4770 mIoU=0.2766 mDice~=0.3725 MASD=22.9200 NSD=0.2802
+[epoch 73] train_loss=0.0521 val_loss=0.4694 mIoU=0.2891 mDice~=0.3881 MASD=22.3283 NSD=0.2933
+[epoch 74] train_loss=0.0511 val_loss=0.4665 mIoU=0.2894 mDice~=0.3893 MASD=21.4461 NSD=0.2894
+[epoch 75] train_loss=0.0513 val_loss=0.4783 mIoU=0.2785 mDice~=0.3753 MASD=22.9318 NSD=0.2826
+[epoch 76] train_loss=0.0521 val_loss=0.4679 mIoU=0.2902 mDice~=0.3908 MASD=22.8312 NSD=0.2904
+[epoch 77] train_loss=0.0517 val_loss=0.4693 mIoU=0.2891 mDice~=0.3890 MASD=22.6757 NSD=0.2903
+[epoch 78] train_loss=0.0515 val_loss=0.4712 mIoU=0.2869 mDice~=0.3859 MASD=22.7833 NSD=0.2906
+[epoch 79] train_loss=0.0513 val_loss=0.4649 mIoU=0.2932 mDice~=0.3944 MASD=21.6865 NSD=0.2957
+[epoch 80] train_loss=0.0515 val_loss=0.4698 mIoU=0.2868 mDice~=0.3873 MASD=22.0515 NSD=0.2909
+Training done. Best mIoU=0.3132. Best ckpt: /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/best_TriPath.ckpt
+Logs saved to /home/rmosad/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_vesicular_glandsE80/20260302-164815

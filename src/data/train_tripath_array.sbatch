@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=tripath
-#SBATCH --output=logs/tripath_%A_%a.out
-#SBATCH --error=logs/tripath_%A_%a.err
+#SBATCH --job-name=tripath_stacked
+#SBATCH --output=/home/rmosad/surgical-video-segmentation-/logs/tripath_%A_%a.out
+#SBATCH --error=/home/rmosad/surgical-video-segmentation-/logs/tripath_%A_%a.err
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_l40s:1
 #SBATCH --cpus-per-task=8
@@ -14,15 +14,20 @@ set -euo pipefail
 REPO=/home/rmosad/surgical-video-segmentation-
 ROOT=/home/rmosad/DSAD_pped/set3
 LIST=$ROOT/organs.txt
-PY=/home/rmosad/.conda/envs/svs/bin/python
+PY=/home/rmosad/.conda/envs/svs2/bin/python
+
+mkdir -p "$REPO/logs"
 
 export PYTHONPATH="$REPO/src:${PYTHONPATH:-}"
 cd "$REPO/src"
 
-mkdir -p $REPO/logs
-
 # Pick organ for this task
 ORGAN=$(sed -n "${SLURM_ARRAY_TASK_ID}p" "$LIST")
+
+if [[ -z "${ORGAN:-}" ]]; then
+  echo "No organ found for task id ${SLURM_ARRAY_TASK_ID}"
+  exit 1
+fi
 
 # Optional skip
 if [[ "$ORGAN" == "ss" ]]; then
@@ -31,16 +36,18 @@ if [[ "$ORGAN" == "ss" ]]; then
 fi
 
 echo "Organ: $ORGAN"
+echo "Host: $(hostname)"
+echo "Python: $PY"
 echo "GPU:"
 nvidia-smi || true
 
-cd $REPO
+# sanity import
+$PY -c "from mmcv.ops import ModulatedDeformConv2d; from models.tripath import TriPathUNetStacked; print('mmcv + TriPathUNetStacked import OK')"
 
-# Save dir per organ
-SAVE_DIR="$REPO/experiments/set3UNet/UNet_256_${ORGAN}E80"
+SAVE_DIR="$REPO/experiments/set3TriPathStacked/TriPathStacked_256_${ORGAN}E80"
 mkdir -p "$SAVE_DIR"
 
-$PY src/training/train_EB.py \
+$PY training/train_EB.py \
   --data-root "$ROOT/$ORGAN" \
   --images-subdir images \
   --masks-subdir masks \
@@ -49,7 +56,8 @@ $PY src/training/train_EB.py \
   --num-classes 2 \
   --img-size 256 256 \
   --save-dir "$SAVE_DIR" \
-  --num-workers 4 \
+  --batch-size 4 \
+  --num-workers 0 \
   --epochs 80 \
   --lr 1e-4 \
   --weight-decay 1e-3
