@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=tripath_stacked
-#SBATCH --output=/home/rmosad/surgical-video-segmentation-/logs/tripath_%A_%a.out
-#SBATCH --error=/home/rmosad/surgical-video-segmentation-/logs/tripath_%A_%a.err
+#SBATCH --output=/home/idavis3/surgical-video-segmentation-/logs/tripath_%A_%a.out
+#SBATCH --error=/home/idavis3/surgical-video-segmentation-/logs/tripath_%A_%a.err
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:nvidia_l40s:1
 #SBATCH --cpus-per-task=8
@@ -11,10 +11,10 @@
 
 set -euo pipefail
 
-REPO=/home/rmosad/surgical-video-segmentation-
-ROOT=/home/rmosad/DSAD_pped/set3
+REPO=/home/idavis3/surgical-video-segmentation-
+ROOT=/home/idavis3/DSAD_pped/set3
 LIST=$ROOT/organs.txt
-PY=/home/rmosad/.conda/envs/svs2/bin/python
+PY=/home/idavis3/.conda/envs/svs2/bin/python
 
 mkdir -p "$REPO/logs"
 
