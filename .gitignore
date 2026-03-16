@@ -6,3 +6,7 @@
 
 # Training outputs
 experiments/
+/src/data/BundleTripathTrain.sh
+/src/data/train_tripath_array.sbatch
+/src/data/preprocess.sh
+/src/data/train_tripath_array.sbatch
