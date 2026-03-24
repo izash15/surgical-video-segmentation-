@@ -14,7 +14,7 @@ set -euo pipefail
 REPO=/home/idavis3/surgical-video-segmentation-
 ROOT=/home/idavis3/DSAD_pped/set3
 LIST=$ROOT/organs.txt
-PY=/home/idavis3/.conda/envs/svs2/bin/python
+PY=/home/idavis3/miniconda3/envs/svs/bin/python
 
 mkdir -p "$REPO/logs"
 

@@ -1,0 +1,120 @@
+Organ: colon
+Host: gpu02
+Python: /home/idavis3/miniconda3/envs/svs/bin/python
+GPU:
+Mon Mar 16 14:41:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:E1:00.0 Off |                    0 |
+| N/A   24C    P8             32W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+mmcv + TriPathUNetStacked import OK
+Model params: 24.99M
+[epoch 1] train_loss=0.6413 val_loss=0.6446 mIoU=0.3745 mDice~=0.4796 MASD=31.3088 NSD=0.2649
+** New best mIoU: 0.3745. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 2] train_loss=0.4566 val_loss=0.5327 mIoU=0.4753 mDice~=0.5923 MASD=20.9923 NSD=0.3508
+** New best mIoU: 0.4753. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 3] train_loss=0.3721 val_loss=0.5112 mIoU=0.4906 mDice~=0.6023 MASD=20.9399 NSD=0.3963
+** New best mIoU: 0.4906. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 4] train_loss=0.3226 val_loss=0.5051 mIoU=0.4804 mDice~=0.5906 MASD=21.1329 NSD=0.3849
+[epoch 5] train_loss=0.2881 val_loss=0.4219 mIoU=0.5185 mDice~=0.6334 MASD=19.9195 NSD=0.4146
+** New best mIoU: 0.5185. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 6] train_loss=0.2596 val_loss=0.4546 mIoU=0.4925 mDice~=0.6098 MASD=19.9283 NSD=0.4195
+[epoch 7] train_loss=0.2325 val_loss=0.4808 mIoU=0.4789 mDice~=0.5960 MASD=22.5535 NSD=0.4035
+[epoch 8] train_loss=0.2169 val_loss=0.4716 mIoU=0.4854 mDice~=0.5995 MASD=19.2462 NSD=0.4151
+[epoch 9] train_loss=0.2054 val_loss=0.4667 mIoU=0.5198 mDice~=0.6307 MASD=19.8364 NSD=0.4497
+** New best mIoU: 0.5198. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 10] train_loss=0.1920 val_loss=0.4478 mIoU=0.5504 mDice~=0.6620 MASD=17.8924 NSD=0.4768
+** New best mIoU: 0.5504. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 11] train_loss=0.1785 val_loss=0.4564 mIoU=0.4963 mDice~=0.6056 MASD=19.4180 NSD=0.4285
+[epoch 12] train_loss=0.1776 val_loss=0.4166 mIoU=0.5558 mDice~=0.6695 MASD=17.5155 NSD=0.4717
+** New best mIoU: 0.5558. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 13] train_loss=0.1673 val_loss=0.4078 mIoU=0.5494 mDice~=0.6605 MASD=17.5101 NSD=0.4769
+[epoch 14] train_loss=0.1593 val_loss=0.4156 mIoU=0.5886 mDice~=0.6989 MASD=16.2145 NSD=0.5079
+** New best mIoU: 0.5886. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 15] train_loss=0.1493 val_loss=0.3889 mIoU=0.5640 mDice~=0.6722 MASD=16.4504 NSD=0.4979
+[epoch 16] train_loss=0.1452 val_loss=0.4075 mIoU=0.5704 mDice~=0.6854 MASD=15.9509 NSD=0.4960
+[epoch 17] train_loss=0.1454 val_loss=0.4126 mIoU=0.5498 mDice~=0.6581 MASD=18.8759 NSD=0.4821
+[epoch 18] train_loss=0.1328 val_loss=0.3671 mIoU=0.5914 mDice~=0.6993 MASD=15.4985 NSD=0.5231
+** New best mIoU: 0.5914. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 19] train_loss=0.1271 val_loss=0.4097 mIoU=0.5730 mDice~=0.6819 MASD=15.0513 NSD=0.5067
+[epoch 20] train_loss=0.1197 val_loss=0.3752 mIoU=0.6000 mDice~=0.7085 MASD=14.7486 NSD=0.5285
+** New best mIoU: 0.6000. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 21] train_loss=0.1203 val_loss=0.3887 mIoU=0.5673 mDice~=0.6779 MASD=16.5774 NSD=0.5110
+[epoch 22] train_loss=0.1202 val_loss=0.3511 mIoU=0.6231 mDice~=0.7299 MASD=13.6955 NSD=0.5567
+** New best mIoU: 0.6231. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 23] train_loss=0.1197 val_loss=0.4322 mIoU=0.5553 mDice~=0.6634 MASD=16.9494 NSD=0.4963
+[epoch 24] train_loss=0.1093 val_loss=0.4102 mIoU=0.5807 mDice~=0.6932 MASD=14.3690 NSD=0.5177
+[epoch 25] train_loss=0.1070 val_loss=0.4091 mIoU=0.5945 mDice~=0.7048 MASD=14.6798 NSD=0.5111
+[epoch 26] train_loss=0.1036 val_loss=0.4206 mIoU=0.5984 mDice~=0.7125 MASD=14.8759 NSD=0.5209
+[epoch 27] train_loss=0.0987 val_loss=0.4313 mIoU=0.5837 mDice~=0.6901 MASD=16.7368 NSD=0.5201
+[epoch 28] train_loss=0.0996 val_loss=0.3695 mIoU=0.6282 mDice~=0.7374 MASD=13.5144 NSD=0.5603
+** New best mIoU: 0.6282. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+[epoch 29] train_loss=0.0985 val_loss=0.4455 mIoU=0.5760 mDice~=0.6847 MASD=15.8827 NSD=0.5155
+[epoch 30] train_loss=0.0916 val_loss=0.4071 mIoU=0.6038 mDice~=0.7075 MASD=15.2666 NSD=0.5454
+[epoch 31] train_loss=0.0921 val_loss=0.3862 mIoU=0.6227 mDice~=0.7294 MASD=14.2220 NSD=0.5543
+[epoch 32] train_loss=0.0850 val_loss=0.3777 mIoU=0.6101 mDice~=0.7157 MASD=14.3723 NSD=0.5381
+[epoch 33] train_loss=0.0839 val_loss=0.3857 mIoU=0.6122 mDice~=0.7156 MASD=15.3683 NSD=0.5487
+[epoch 34] train_loss=0.0796 val_loss=0.4352 mIoU=0.5835 mDice~=0.6861 MASD=16.6649 NSD=0.5298
+[epoch 35] train_loss=0.0811 val_loss=0.4203 mIoU=0.6069 mDice~=0.7121 MASD=15.2948 NSD=0.5532
+[epoch 36] train_loss=0.0790 val_loss=0.4011 mIoU=0.5935 mDice~=0.6981 MASD=15.2589 NSD=0.5410
+[epoch 37] train_loss=0.0796 val_loss=0.3830 mIoU=0.6127 mDice~=0.7175 MASD=14.7361 NSD=0.5508
+[epoch 38] train_loss=0.0726 val_loss=0.4051 mIoU=0.6125 mDice~=0.7167 MASD=13.2162 NSD=0.5563
+[epoch 39] train_loss=0.0684 val_loss=0.4130 mIoU=0.6004 mDice~=0.7054 MASD=16.0390 NSD=0.5446
+[epoch 40] train_loss=0.0713 val_loss=0.4247 mIoU=0.5958 mDice~=0.7019 MASD=13.9003 NSD=0.5387
+[epoch 41] train_loss=0.0695 val_loss=0.4416 mIoU=0.6011 mDice~=0.7071 MASD=14.0624 NSD=0.5464
+[epoch 42] train_loss=0.0660 val_loss=0.4439 mIoU=0.5914 mDice~=0.6970 MASD=16.3079 NSD=0.5401
+[epoch 43] train_loss=0.0647 val_loss=0.4187 mIoU=0.6005 mDice~=0.7061 MASD=15.4157 NSD=0.5393
+[epoch 44] train_loss=0.0629 val_loss=0.4260 mIoU=0.6028 mDice~=0.7106 MASD=14.3650 NSD=0.5447
+[epoch 45] train_loss=0.0612 val_loss=0.4338 mIoU=0.5978 mDice~=0.7031 MASD=15.2498 NSD=0.5349
+[epoch 46] train_loss=0.0588 val_loss=0.4242 mIoU=0.6065 mDice~=0.7130 MASD=14.0180 NSD=0.5463
+[epoch 47] train_loss=0.0597 val_loss=0.4496 mIoU=0.6046 mDice~=0.7081 MASD=15.2959 NSD=0.5502
+[epoch 48] train_loss=0.0586 val_loss=0.4127 mIoU=0.6163 mDice~=0.7200 MASD=14.7005 NSD=0.5576
+[epoch 49] train_loss=0.0558 val_loss=0.4226 mIoU=0.6168 mDice~=0.7223 MASD=13.6770 NSD=0.5577
+[epoch 50] train_loss=0.0550 val_loss=0.4258 mIoU=0.6054 mDice~=0.7111 MASD=13.5785 NSD=0.5471
+[epoch 51] train_loss=0.0536 val_loss=0.4340 mIoU=0.6179 mDice~=0.7228 MASD=14.0424 NSD=0.5596
+[epoch 52] train_loss=0.0529 val_loss=0.4460 mIoU=0.6109 mDice~=0.7134 MASD=15.2900 NSD=0.5556
+[epoch 53] train_loss=0.0522 val_loss=0.4355 mIoU=0.6132 mDice~=0.7161 MASD=14.9209 NSD=0.5569
+[epoch 54] train_loss=0.0505 val_loss=0.4373 mIoU=0.6092 mDice~=0.7149 MASD=14.1061 NSD=0.5534
+[epoch 55] train_loss=0.0516 val_loss=0.4605 mIoU=0.5905 mDice~=0.6954 MASD=15.3090 NSD=0.5376
+[epoch 56] train_loss=0.0495 val_loss=0.4481 mIoU=0.6081 mDice~=0.7117 MASD=13.6909 NSD=0.5524
+[epoch 57] train_loss=0.0482 val_loss=0.4489 mIoU=0.6105 mDice~=0.7160 MASD=14.3718 NSD=0.5581
+[epoch 58] train_loss=0.0472 val_loss=0.4684 mIoU=0.5985 mDice~=0.7050 MASD=13.6158 NSD=0.5425
+[epoch 59] train_loss=0.0470 val_loss=0.4497 mIoU=0.6144 mDice~=0.7185 MASD=13.9989 NSD=0.5532
+[epoch 60] train_loss=0.0464 val_loss=0.4602 mIoU=0.6086 mDice~=0.7132 MASD=13.9993 NSD=0.5501
+[epoch 61] train_loss=0.0458 val_loss=0.4644 mIoU=0.6112 mDice~=0.7155 MASD=14.6325 NSD=0.5516
+[epoch 62] train_loss=0.0459 val_loss=0.4493 mIoU=0.6157 mDice~=0.7204 MASD=13.7271 NSD=0.5543
+[epoch 63] train_loss=0.0447 val_loss=0.4591 mIoU=0.6076 mDice~=0.7129 MASD=14.4688 NSD=0.5461
+[epoch 64] train_loss=0.0444 val_loss=0.4525 mIoU=0.6186 mDice~=0.7229 MASD=13.6730 NSD=0.5549
+[epoch 65] train_loss=0.0435 val_loss=0.4619 mIoU=0.6151 mDice~=0.7198 MASD=14.3044 NSD=0.5506
+[epoch 66] train_loss=0.0425 val_loss=0.4631 mIoU=0.6121 mDice~=0.7176 MASD=14.0000 NSD=0.5510
+[epoch 67] train_loss=0.0426 val_loss=0.4607 mIoU=0.6211 mDice~=0.7250 MASD=13.9729 NSD=0.5591
+[epoch 68] train_loss=0.0423 val_loss=0.4559 mIoU=0.6195 mDice~=0.7243 MASD=13.5708 NSD=0.5524
+[epoch 69] train_loss=0.0417 val_loss=0.4749 mIoU=0.6127 mDice~=0.7169 MASD=14.6054 NSD=0.5493
+[epoch 70] train_loss=0.0421 val_loss=0.4660 mIoU=0.6180 mDice~=0.7220 MASD=13.8096 NSD=0.5577
+[epoch 71] train_loss=0.0417 val_loss=0.4708 mIoU=0.6103 mDice~=0.7155 MASD=14.8516 NSD=0.5475
+[epoch 72] train_loss=0.0414 val_loss=0.4622 mIoU=0.6180 mDice~=0.7224 MASD=13.8582 NSD=0.5544
+[epoch 73] train_loss=0.0410 val_loss=0.4704 mIoU=0.6138 mDice~=0.7188 MASD=14.2305 NSD=0.5505
+[epoch 74] train_loss=0.0413 val_loss=0.4686 mIoU=0.6181 mDice~=0.7232 MASD=14.4966 NSD=0.5570
+[epoch 75] train_loss=0.0409 val_loss=0.4664 mIoU=0.6165 mDice~=0.7211 MASD=13.9278 NSD=0.5532
+[epoch 76] train_loss=0.0411 val_loss=0.4668 mIoU=0.6130 mDice~=0.7186 MASD=13.9959 NSD=0.5512
+[epoch 77] train_loss=0.0410 val_loss=0.4697 mIoU=0.6146 mDice~=0.7199 MASD=14.0034 NSD=0.5472
+[epoch 78] train_loss=0.0409 val_loss=0.4625 mIoU=0.6197 mDice~=0.7242 MASD=13.7066 NSD=0.5543
+[epoch 79] train_loss=0.0407 val_loss=0.4598 mIoU=0.6178 mDice~=0.7227 MASD=13.8520 NSD=0.5541
+[epoch 80] train_loss=0.0410 val_loss=0.4653 mIoU=0.6187 mDice~=0.7229 MASD=13.9311 NSD=0.5567
+Training done. Best mIoU=0.6282. Best ckpt: /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/best_TriPath.ckpt
+Logs saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_colonE80/20260316-144152

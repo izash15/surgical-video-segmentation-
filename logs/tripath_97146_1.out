@@ -1,7 +1,6 @@
 Organ: abdominal_wall
 Host: gpu02
-Python: /home/rmosad/.conda/envs/svs2/bin/python
-GPU:
+Python: /home/rmosad/.conda/envs/svs2/bin/python 
 Mon Mar  2 14:40:56 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 575.51.03              Driver Version: 575.51.03      CUDA Version: 12.9     |

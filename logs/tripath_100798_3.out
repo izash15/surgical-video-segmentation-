@@ -1,0 +1,117 @@
+Organ: inferior_mesenteric_artery
+Host: gpuhuang
+Python: /home/idavis3/miniconda3/envs/svs/bin/python
+GPU:
+Mon Mar 16 14:41:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000001:0B:00.0 Off |                    0 |
+| N/A   27C    P8             32W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+mmcv + TriPathUNetStacked import OK
+Model params: 24.99M
+[epoch 1] train_loss=0.7582 val_loss=0.6586 mIoU=0.2092 mDice~=0.3123 MASD=23.8599 NSD=0.1654
+** New best mIoU: 0.2092. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 2] train_loss=0.5900 val_loss=0.6012 mIoU=0.2529 mDice~=0.3651 MASD=22.1515 NSD=0.2051
+** New best mIoU: 0.2529. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 3] train_loss=0.5084 val_loss=0.5421 mIoU=0.2873 mDice~=0.4134 MASD=17.2857 NSD=0.2470
+** New best mIoU: 0.2873. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 4] train_loss=0.4452 val_loss=0.5157 mIoU=0.2764 mDice~=0.4061 MASD=19.6362 NSD=0.2274
+[epoch 5] train_loss=0.3933 val_loss=0.4798 mIoU=0.2502 mDice~=0.3490 MASD=19.4986 NSD=0.2263
+[epoch 6] train_loss=0.3426 val_loss=0.4471 mIoU=0.2897 mDice~=0.4104 MASD=16.5319 NSD=0.2410
+** New best mIoU: 0.2897. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 7] train_loss=0.3040 val_loss=0.4653 mIoU=0.2055 mDice~=0.2930 MASD=19.4504 NSD=0.2096
+[epoch 8] train_loss=0.2727 val_loss=0.4178 mIoU=0.2865 mDice~=0.3951 MASD=21.8334 NSD=0.2552
+[epoch 9] train_loss=0.2434 val_loss=0.3891 mIoU=0.3091 mDice~=0.4218 MASD=17.9439 NSD=0.2869
+** New best mIoU: 0.3091. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 10] train_loss=0.2243 val_loss=0.4006 mIoU=0.3002 mDice~=0.4262 MASD=18.8718 NSD=0.2766
+[epoch 11] train_loss=0.2063 val_loss=0.3872 mIoU=0.3065 mDice~=0.4286 MASD=18.5991 NSD=0.2808
+[epoch 12] train_loss=0.1893 val_loss=0.4184 mIoU=0.2407 mDice~=0.3331 MASD=23.5748 NSD=0.2413
+[epoch 13] train_loss=0.1765 val_loss=0.3855 mIoU=0.2858 mDice~=0.3950 MASD=18.4456 NSD=0.2947
+[epoch 14] train_loss=0.1616 val_loss=0.3567 mIoU=0.3278 mDice~=0.4477 MASD=17.4474 NSD=0.3414
+** New best mIoU: 0.3278. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 15] train_loss=0.1602 val_loss=0.3704 mIoU=0.3121 mDice~=0.4287 MASD=19.8088 NSD=0.3162
+[epoch 16] train_loss=0.1485 val_loss=0.4045 mIoU=0.2581 mDice~=0.3522 MASD=19.3116 NSD=0.2779
+[epoch 17] train_loss=0.1387 val_loss=0.4324 mIoU=0.2117 mDice~=0.2992 MASD=22.3702 NSD=0.2257
+[epoch 18] train_loss=0.1310 val_loss=0.3909 mIoU=0.2676 mDice~=0.3687 MASD=18.7970 NSD=0.2768
+[epoch 19] train_loss=0.1289 val_loss=0.3650 mIoU=0.3095 mDice~=0.4173 MASD=18.7533 NSD=0.3211
+[epoch 20] train_loss=0.1251 val_loss=0.4048 mIoU=0.2554 mDice~=0.3550 MASD=21.1901 NSD=0.2715
+[epoch 21] train_loss=0.1142 val_loss=0.3707 mIoU=0.3010 mDice~=0.4082 MASD=15.7364 NSD=0.3205
+[epoch 22] train_loss=0.1122 val_loss=0.3866 mIoU=0.2818 mDice~=0.3867 MASD=18.9762 NSD=0.3027
+[epoch 23] train_loss=0.1047 val_loss=0.3858 mIoU=0.2854 mDice~=0.3825 MASD=16.9585 NSD=0.2902
+[epoch 24] train_loss=0.1049 val_loss=0.3885 mIoU=0.2726 mDice~=0.3730 MASD=15.4752 NSD=0.2925
+[epoch 25] train_loss=0.1066 val_loss=0.3473 mIoU=0.3363 mDice~=0.4539 MASD=15.9066 NSD=0.3532
+** New best mIoU: 0.3363. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 26] train_loss=0.0949 val_loss=0.3379 mIoU=0.3545 mDice~=0.4740 MASD=14.6195 NSD=0.3603
+** New best mIoU: 0.3545. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 27] train_loss=0.0950 val_loss=0.3507 mIoU=0.3285 mDice~=0.4504 MASD=14.9455 NSD=0.3458
+[epoch 28] train_loss=0.0949 val_loss=0.3463 mIoU=0.3398 mDice~=0.4610 MASD=16.6870 NSD=0.3586
+[epoch 29] train_loss=0.0863 val_loss=0.3383 mIoU=0.3488 mDice~=0.4710 MASD=15.4759 NSD=0.3740
+[epoch 30] train_loss=0.0850 val_loss=0.3524 mIoU=0.3299 mDice~=0.4438 MASD=17.2232 NSD=0.3499
+[epoch 31] train_loss=0.0845 val_loss=0.3724 mIoU=0.3063 mDice~=0.4157 MASD=14.9910 NSD=0.3299
+[epoch 32] train_loss=0.0805 val_loss=0.3852 mIoU=0.2883 mDice~=0.3930 MASD=15.7752 NSD=0.3064
+[epoch 33] train_loss=0.0761 val_loss=0.3739 mIoU=0.3055 mDice~=0.4113 MASD=16.4525 NSD=0.3144
+[epoch 34] train_loss=0.0744 val_loss=0.3528 mIoU=0.3398 mDice~=0.4552 MASD=16.2635 NSD=0.3661
+[epoch 35] train_loss=0.0768 val_loss=0.3664 mIoU=0.3239 mDice~=0.4298 MASD=15.2516 NSD=0.3380
+[epoch 36] train_loss=0.0731 val_loss=0.3347 mIoU=0.3604 mDice~=0.4835 MASD=14.0131 NSD=0.3762
+** New best mIoU: 0.3604. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+[epoch 37] train_loss=0.0694 val_loss=0.3753 mIoU=0.3065 mDice~=0.4110 MASD=16.6407 NSD=0.3183
+[epoch 38] train_loss=0.0651 val_loss=0.3513 mIoU=0.3377 mDice~=0.4527 MASD=15.7574 NSD=0.3525
+[epoch 39] train_loss=0.0667 val_loss=0.3663 mIoU=0.3236 mDice~=0.4348 MASD=16.1353 NSD=0.3424
+[epoch 40] train_loss=0.0636 val_loss=0.3726 mIoU=0.3118 mDice~=0.4217 MASD=16.3396 NSD=0.3274
+[epoch 41] train_loss=0.0602 val_loss=0.3629 mIoU=0.3306 mDice~=0.4411 MASD=15.4281 NSD=0.3479
+[epoch 42] train_loss=0.0599 val_loss=0.3739 mIoU=0.3116 mDice~=0.4211 MASD=16.1901 NSD=0.3321
+[epoch 43] train_loss=0.0571 val_loss=0.3893 mIoU=0.2907 mDice~=0.3938 MASD=17.6419 NSD=0.3079
+[epoch 44] train_loss=0.0559 val_loss=0.3873 mIoU=0.2939 mDice~=0.3951 MASD=17.0753 NSD=0.3099
+[epoch 45] train_loss=0.0544 val_loss=0.3747 mIoU=0.3097 mDice~=0.4237 MASD=15.9795 NSD=0.3296
+[epoch 46] train_loss=0.0531 val_loss=0.3941 mIoU=0.2838 mDice~=0.3904 MASD=17.2200 NSD=0.3059
+[epoch 47] train_loss=0.0522 val_loss=0.3619 mIoU=0.3322 mDice~=0.4469 MASD=14.5044 NSD=0.3483
+[epoch 48] train_loss=0.0508 val_loss=0.3846 mIoU=0.3027 mDice~=0.4080 MASD=16.4323 NSD=0.3238
+[epoch 49] train_loss=0.0483 val_loss=0.3627 mIoU=0.3330 mDice~=0.4504 MASD=14.0039 NSD=0.3543
+[epoch 50] train_loss=0.0471 val_loss=0.3783 mIoU=0.3134 mDice~=0.4220 MASD=15.1563 NSD=0.3313
+[epoch 51] train_loss=0.0455 val_loss=0.3753 mIoU=0.3168 mDice~=0.4296 MASD=15.9199 NSD=0.3336
+[epoch 52] train_loss=0.0445 val_loss=0.3801 mIoU=0.3094 mDice~=0.4187 MASD=15.4744 NSD=0.3284
+[epoch 53] train_loss=0.0438 val_loss=0.3819 mIoU=0.3108 mDice~=0.4211 MASD=15.5072 NSD=0.3316
+[epoch 54] train_loss=0.0428 val_loss=0.3833 mIoU=0.3085 mDice~=0.4181 MASD=14.6275 NSD=0.3264
+[epoch 55] train_loss=0.0418 val_loss=0.3834 mIoU=0.3094 mDice~=0.4183 MASD=15.0453 NSD=0.3305
+[epoch 56] train_loss=0.0403 val_loss=0.3834 mIoU=0.3090 mDice~=0.4194 MASD=16.0457 NSD=0.3298
+[epoch 57] train_loss=0.0400 val_loss=0.3758 mIoU=0.3222 mDice~=0.4353 MASD=15.1936 NSD=0.3413
+[epoch 58] train_loss=0.0384 val_loss=0.3814 mIoU=0.3152 mDice~=0.4249 MASD=15.0896 NSD=0.3355
+[epoch 59] train_loss=0.0379 val_loss=0.3779 mIoU=0.3232 mDice~=0.4353 MASD=15.4349 NSD=0.3416
+[epoch 60] train_loss=0.0369 val_loss=0.3825 mIoU=0.3176 mDice~=0.4283 MASD=15.1016 NSD=0.3378
+[epoch 61] train_loss=0.0359 val_loss=0.3842 mIoU=0.3115 mDice~=0.4227 MASD=15.0108 NSD=0.3322
+[epoch 62] train_loss=0.0348 val_loss=0.3851 mIoU=0.3120 mDice~=0.4229 MASD=14.8759 NSD=0.3324
+[epoch 63] train_loss=0.0350 val_loss=0.3846 mIoU=0.3155 mDice~=0.4251 MASD=14.9676 NSD=0.3369
+[epoch 64] train_loss=0.0341 val_loss=0.3751 mIoU=0.3270 mDice~=0.4400 MASD=14.2145 NSD=0.3509
+[epoch 65] train_loss=0.0339 val_loss=0.3809 mIoU=0.3199 mDice~=0.4306 MASD=15.1065 NSD=0.3416
+[epoch 66] train_loss=0.0331 val_loss=0.3859 mIoU=0.3137 mDice~=0.4249 MASD=14.6325 NSD=0.3367
+[epoch 67] train_loss=0.0327 val_loss=0.3891 mIoU=0.3099 mDice~=0.4189 MASD=14.8470 NSD=0.3313
+[epoch 68] train_loss=0.0321 val_loss=0.3804 mIoU=0.3206 mDice~=0.4337 MASD=14.6289 NSD=0.3424
+[epoch 69] train_loss=0.0323 val_loss=0.3868 mIoU=0.3140 mDice~=0.4235 MASD=15.0811 NSD=0.3367
+[epoch 70] train_loss=0.0312 val_loss=0.3876 mIoU=0.3139 mDice~=0.4239 MASD=14.5323 NSD=0.3343
+[epoch 71] train_loss=0.0311 val_loss=0.3837 mIoU=0.3204 mDice~=0.4314 MASD=14.2122 NSD=0.3428
+[epoch 72] train_loss=0.0312 val_loss=0.3819 mIoU=0.3244 mDice~=0.4367 MASD=14.8272 NSD=0.3450
+[epoch 73] train_loss=0.0309 val_loss=0.3846 mIoU=0.3190 mDice~=0.4292 MASD=14.1496 NSD=0.3387
+[epoch 74] train_loss=0.0304 val_loss=0.3837 mIoU=0.3182 mDice~=0.4295 MASD=14.5952 NSD=0.3398
+[epoch 75] train_loss=0.0304 val_loss=0.3843 mIoU=0.3195 mDice~=0.4313 MASD=13.9214 NSD=0.3399
+[epoch 76] train_loss=0.0299 val_loss=0.3855 mIoU=0.3198 mDice~=0.4309 MASD=14.7669 NSD=0.3417
+[epoch 77] train_loss=0.0301 val_loss=0.3847 mIoU=0.3188 mDice~=0.4303 MASD=14.1829 NSD=0.3403
+[epoch 78] train_loss=0.0300 val_loss=0.3853 mIoU=0.3191 mDice~=0.4307 MASD=14.6714 NSD=0.3408
+[epoch 79] train_loss=0.0300 val_loss=0.3826 mIoU=0.3212 mDice~=0.4326 MASD=14.8477 NSD=0.3436
+[epoch 80] train_loss=0.0298 val_loss=0.3831 mIoU=0.3230 mDice~=0.4349 MASD=14.7618 NSD=0.3446
+Training done. Best mIoU=0.3604. Best ckpt: /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/best_TriPath.ckpt
+Logs saved to /home/idavis3/surgical-video-segmentation-/experiments/set3TriPathStacked/TriPathStacked_256_inferior_mesenteric_arteryE80/20260316-144152

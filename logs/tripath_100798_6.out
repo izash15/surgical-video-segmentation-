@@ -1,8 +1,8 @@
-Organ: small_intestine
-Host: gpuhuang
-Python: /home/idavis3/.conda/envs/svs2/bin/python
+Organ: multilable
+Host: gpu03
+Python: /home/idavis3/miniconda3/envs/svs/bin/python
 GPU:
-Mon Mar 16 13:09:52 2026       
+Mon Mar 16 15:14:02 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
 +-----------------------------------------+------------------------+----------------------+
@@ -10,8 +10,8 @@ Mon Mar 16 13:09:52 2026
 | Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
-|   0  NVIDIA L40S                    On  |   00000000:0B:00.0 Off |                    0 |
-| N/A   26C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
+|   0  NVIDIA L40S                    On  |   00000000:E1:00.0 Off |                    0 |
+| N/A   25C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
 |                                         |                        |                  N/A |
 +-----------------------------------------+------------------------+----------------------+
 
@@ -22,3 +22,4 @@ Mon Mar 16 13:09:52 2026
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
+mmcv + TriPathUNetStacked import OK
