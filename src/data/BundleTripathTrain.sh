@@ -3,9 +3,9 @@ set -euo pipefail
 
 # --- User editable section ---
 
-ROOT_DIR="/home/rmosad/DSAD_pped/set3"
-REPO_DIR="/home/rmosad/surgical-video-segmentation-/src/"
-PY="/home/rmosad/.conda/envs/svs/bin/python"
+ROOT_DIR="/home/idavis3/DSAD_pped/set3"
+REPO_DIR="/home/idavis3/surgical-video-segmentation-/src/"
+PY="/home/idavis3/.conda/envs/svs/bin/python"
 
 # List of folder names to skip
 SKIP_LIST=("ss")
