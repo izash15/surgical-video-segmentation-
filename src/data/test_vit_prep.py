@@ -4,6 +4,10 @@ import torch
 import torchvision.transforms as transforms
 import torchvision.transforms.functional as TF
 
+#to run this run command: 
+#python /home/idavis3/surgical-video-segmentation-/src/data/test_vit_prep.py
+# run in the home/name directory!
+
 # ── CONFIG — change these two lines to match your paths ──────
 DATA_ROOT = Path("/home/idavis3/DSAD_pped/set3/")
 ORGAN     = "liver"   # pick any organ folder to test with

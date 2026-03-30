@@ -10,6 +10,6 @@
 cd ~/surgical-video-segmentation-/src/data
 
 # sanity
-/home/rmosad/.conda/envs/svs/bin/python -c "from PIL import Image; print('PIL ok in job')"
+/home/idavis3/.conda/envs/svs/bin/python -c "from PIL import Image; print('PIL ok in job')"
 
 bash preprocess.sh
