@@ -1,21 +1,24 @@
-# check_mit_shapes.py
+# check_mit_shapes.py  — updated
 import torch
-from transformers import SegformerModel, SegformerConfig
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+from src.models.ViT import MiTB0Encoder
 
-# Inline the encoder just enough to test — no need to import your full module
-class MiTB0Encoder(torch.nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.backbone = SegformerModel(SegformerConfig())  # random weights, no download
-
-enc = MiTB0Encoder()
+enc = MiTB0Encoder(pretrained=False, freeze_backbone=True, base_ch=64)
 enc.eval()
 
 x = torch.randn(2, 3, 512, 512)
 
 with torch.no_grad():
-    out = enc.backbone(pixel_values=x, output_hidden_states=True)
+    p1, p2, p3, p4 = enc(x)
 
-print(f"Number of hidden states: {len(out.hidden_states)}")
-for i, h in enumerate(out.hidden_states):
-    print(f"  stage {i+1}: {h.shape}")
+print(p1.shape)  # expect (2,  64, 128, 128)
+print(p2.shape)  # expect (2, 128,  64,  64)
+print(p3.shape)  # expect (2, 256,  32,  32)
+print(p4.shape)  # expect (2, 512,  16,  16)
+
+# Confirm backbone params are actually frozen
+frozen = all(not p.requires_grad for p in enc.backbone.parameters())
+trainable = all(p.requires_grad for p in enc.proj1.parameters())
+print(f"backbone frozen: {frozen}")      # expect True
+print(f"proj1 trainable: {trainable}")   # expect True
