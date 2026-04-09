@@ -11,7 +11,8 @@ import numpy as np
 import csv, json, time
 from datetime import datetime
 
-from models.tripath import TriPathUNetStacked
+from models.ViTStacked import QuadPathUNetStacked
+# from models.tripath import TriPathUNetStacked
 # from models.segformer import SegFormer
 from models.unet import UNet
 from data.dsad_dataset import DSADDataset
@@ -122,7 +123,14 @@ def main():
     dl_train, dl_val = build_loaders(args)
     
     ####### !!!!Change Network here
-    net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32) 
+    # net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32)
+    net = QuadPathUNetStacked(
+    in_ch=3, 
+    num_classes=args.num_classes, 
+    base_ch=32,
+    vit_pretrained=True,
+    vit_freeze=False
+    )
     # net = SegFormer(num_classes=args.num_classes, variant="b2")
     # net = TriPathDC(in_ch=3, num_classes=args.num_classes, base_ch=32)
     # net = UNet(in_ch=3, num_classes=args.num_classes, base_ch=64)
@@ -139,7 +147,8 @@ def main():
     scaler = torch.cuda.amp.GradScaler(enabled=args.amp)
 
     best_miou = 0.0
-    best_ckpt = Path(args.save_dir) / "best_TriPath.ckpt"          #####!!! Change the best file name here. 
+    # best_ckpt = Path(args.save_dir) / "best_TriPath.ckpt"          #####!!! Change the best file name here.
+    best_ckpt = Path(args.save_dir) / "best_QuadPath.ckpt"
     max_grad_norm = 5.0  # or any value you want, e.g. 1.0–10.0
 
     for epoch in range(1, args.epochs+1):
