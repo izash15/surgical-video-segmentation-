@@ -11,7 +11,9 @@ def prepare_for_vit(x):
     return transform(x)
 
 
-class MiTB0Encoder(nn.Module):
+class MiTB0Encoder(nn.Module): 
+    #backward pass is tested in the pytest unit test but not defined here.
+    # it is a child class of the overall MiTB0UNet, which is tested in the same unit test
     def __init__(self, pretrained=True, freeze_backbone=False, base_ch=64):
         super().__init__()
         b = base_ch              # BUG 1 FIX: b was never assigned, proj layers all crashed
