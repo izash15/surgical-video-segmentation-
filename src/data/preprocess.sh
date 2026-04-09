@@ -5,6 +5,9 @@
 
 ROOT_DIR=/home/idavis3/DSAD/
 OUT_ROOT=/home/idavis3/DSAD_pped/set3
+ROOT_DIR=/home/idavis3/DSAD/
+OUT_ROOT=/home/idavis3/DSAD_pped/set3
+
 
 # Loop through all subdirectories in the given root directory
 for A in "$ROOT_DIR"/*/; do
@@ -12,6 +15,7 @@ for A in "$ROOT_DIR"/*/; do
   echo "Processing folder: $A_NAME"
 
   /home/idavis3/.conda/envs/svs/bin/python dsad_preprocess.py \
+  /home/idavis3/miniconda3/envs/svs/bin/python /home/idavis3/surgical-video-segmentation-/src/data/dsad_preprocess.py\
     --src-root "${ROOT_DIR}/${A_NAME}" \
     --train '1, 4, 5, 6, 8, 9, 10, 12, 15, 16, 17, 19, 22, 23, 24, 25, 27, 28, 29, 30, 31' \
     --val '2,7,11,13,14,18,20,32' \

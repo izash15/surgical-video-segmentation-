@@ -10,8 +10,8 @@ from tqdm import tqdm
 import numpy as np
 import csv, json, time
 from datetime import datetime
-
-from models.tripath import TriPathUNetStacked
+from models.ViTStacked import QuadPathUNetStacked
+#from models.tripath import TriPathUNetStacked
 # from models.segformer import SegFormer
 from models.unet import UNet
 from data.dsad_dataset import DSADDataset
@@ -122,7 +122,9 @@ def main():
     dl_train, dl_val = build_loaders(args)
     
     ####### !!!!Change Network here
-    net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32) 
+    # net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32)
+net = QuadPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32)
+    #net = TriPathUNetStacked(in_ch=3, num_classes=args.num_classes, base_ch=32) 
     # net = SegFormer(num_classes=args.num_classes, variant="b2")
     # net = TriPathDC(in_ch=3, num_classes=args.num_classes, base_ch=32)
     # net = UNet(in_ch=3, num_classes=args.num_classes, base_ch=64)

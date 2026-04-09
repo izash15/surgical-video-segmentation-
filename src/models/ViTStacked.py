@@ -1,3 +1,10 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import warnings
+from mmcv.ops import ModulatedDeformConv2d
+from ViT import MiTB0Encoder, prepare_for_vit
+from tripath import DoubleConv, Down, Up, OutConv, DCNBlock, DSConvBlockMMCV
 
 
 class QuadPathUNetStacked(nn.Module):
@@ -22,52 +29,51 @@ class QuadPathUNetStacked(nn.Module):
         self.stem_cnn = DoubleConv(in_ch, b)
         self.stem_dcn = DoubleConv(in_ch, b)
         self.stem_dsc = DoubleConv(in_ch, b)  # keep DoubleConv at H/1 for cost/stability
-        self.stem_vit = MiTB0Encoder(pretrained=True)  # ViT path
+        self.vit = MiTB0Encoder(pretrained=True, base_ch=base_ch) # one call of vit returns all 3 (h/2, h/4, h/8+deep)
 
         # -------- Encoders (four branches) --------
         # Stage H/2:  b -> 2b
         self.down1_cnn = Down(b, 2*b, block_cls=DoubleConv)
         self.down1_dcn = Down(b, 2*b, block_cls=DCNBlock)
         self.down1_dsc = Down(b, 2*b, block_cls=DSConvBlockMMCV)
-        self.down1_vit = Down(b, 2*b, block_cls=MiTB0Encoder)
-
+        
         # Stage H/4:  2b -> 4b
         self.down2_cnn = Down(2*b, 4*b, block_cls=DoubleConv)
         self.down2_dcn = Down(2*b, 4*b, block_cls=DCNBlock)
         self.down2_dsc = Down(2*b, 4*b, block_cls=DSConvBlockMMCV)
-        self.down2_vit = Down(2*b, 4*b, block_cls=MiTB0Encoder)##
+        
 
         # Stage H/8:  4b -> 8b
         self.down3_cnn = Down(4*b, 8*b, block_cls=DoubleConv)
         self.down3_dcn = Down(4*b, 8*b, block_cls=DCNBlock)
         self.down3_dsc = Down(4*b, 8*b, block_cls=DSConvBlockMMCV)
-        self.down3_vit = Down(4*b, 8*b, block_cls=MiTB0Encoder) ###
-
+       
         # Stage H/16 (bottleneck): 8b -> 16b
         self.down4_cnn = Down(8*b, 16*b, block_cls=DoubleConv)
         self.down4_dcn = Down(8*b, 16*b, block_cls=DCNBlock)
         self.down4_dsc = Down(8*b, 16*b, block_cls=DSConvBlockMMCV)
 
-        # -------- Decoder (channel sizes must match stacked skips) --------
         # Stacked channels:
-        #   skip1 (H/1):  3*b
-        #   skip2 (H/2):  3*(2b)  = 6*b
-        #   skip4 (H/4):  3*(4b)  = 12*b
-        #   skip8 (H/8):  3*(8b)  = 24*b
-        #   bottleneck:   3*(16b) = 48*b
-        self.up1 = Up(in_ch=48*b, skip_ch=24*b, out_ch=8*b)  # H/16 -> H/8
-        self.up2 = Up(in_ch=8*b,  skip_ch=12*b, out_ch=4*b)  # H/8  -> H/4
-        self.up3 = Up(in_ch=4*b,  skip_ch=6*b,  out_ch=b)    # H/4  -> H/2
-        self.up4 = Up(in_ch=b,    skip_ch=3*b,  out_ch=b)    # H/2  -> H/1
+        #   skip1 (H/1):  3*b              (CNN+DCN+DSC only, ViT has no full-res stem)
+        #   skip2 (H/2):  3*(2b)  = 6*b   (CNN+DCN+DSC only, ViT starts at H/4)
+        #   skip4 (H/4):  4*(4b)  = 16*b  (CNN+DCN+DSC+ViT)
+        #   skip8 (H/8):  4*(8b)  = 32*b  (CNN+DCN+DSC+ViT)
+        #   bottleneck:   4*(16b) = 64*b  (CNN+DCN+DSC+ViT)
+
+        self.up1 = Up(in_ch=48*b, skip_ch=24*b, out_ch=8*b)
+        self.up2 = Up(in_ch=8*b,  skip_ch=12*b, out_ch=4*b)
+        self.up3 = Up(in_ch=4*b,  skip_ch=6*b,  out_ch=b)
+        self.up4 = Up(in_ch=b,    skip_ch=3*b,  out_ch=b)
 
         self.outc = OutConv(b, num_classes)
 
     def forward(self, x):
         # ----- Stems (H/1) -----
-        s_c = self.stem_cnn(x)   # [B, b, H, W]
-        s_d = self.stem_dcn(x)   # [B, b, H, W]
-        s_s = self.stem_dsc(x)   # [B, b, H, W]
-        skip1 = torch.cat([s_c, s_d, s_s], dim=1)  # [B, 3b, H, W]
+        s_c = self.stem_cnn(x)
+        s_d = self.stem_dcn(x)
+        s_s = self.stem_dsc(x)
+        skip1 = torch.cat([s_c, s_d, s_s], dim=1)  # [B, 3b, H, W] — no ViT here
+
 
         # ----- Branch 1: CNN -----
         x2_c = self.down1_cnn(s_c)   # [B, 2b, H/2, W/2]
@@ -88,10 +94,10 @@ class QuadPathUNetStacked(nn.Module):
         x5_s = self.down4_dsc(x4_s)
 
         # ----- Stack (concat) bottleneck + skips -----
-        bottleneck = torch.cat([x5_c, x5_d, x5_s], dim=1)  # [B, 48b, H/16, W/16]
-        skip8      = torch.cat([x4_c, x4_d, x4_s], dim=1)  # [B, 24b, H/8,  W/8 ]
-        skip4      = torch.cat([x3_c, x3_d, x3_s], dim=1)  # [B, 12b, H/4,  W/4 ]
-        skip2      = torch.cat([x2_c, x2_d, x2_s], dim=1)  # [B,  6b, H/2,  W/2 ]
+        bottleneck = torch.cat([x5_c, x5_d, x5_s, v16], dim=1)  # [B, 64b, H/16, W/16]
+        skip8      = torch.cat([x4_c, x4_d, x4_s, v8],  dim=1)  # [B, 32b, H/8,  W/8 ]
+        skip4      = torch.cat([x3_c, x3_d, x3_s, v4],  dim=1)  # [B, 16b, H/4,  W/4 ]
+        skip2      = torch.cat([x2_c, x2_d, x2_s],       dim=1)  # [B,  6b, H/2,  W/2 ] 
 
         # ----- Decoder -----
         x = self.up1(bottleneck, skip8)  # -> [B, 8b, H/8,  W/8 ]
