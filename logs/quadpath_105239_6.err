@@ -1,0 +1,18 @@
+/home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: /home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSs
+  warn(f"Failed to load image Python extension: {e}")
+/home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/mmcv/__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+/home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: /home/rmosad/.conda/envs/svs2/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN5torch3jit17parseSchemaOrNameERKSs
+  warn(f"Failed to load image Python extension: {e}")
+Traceback (most recent call last):
+  File "/home/rmosad/surgical-video-segmentation-/src/training/train_EB.py", line 286, in <module>
+    main()
+  File "/home/rmosad/surgical-video-segmentation-/src/training/train_EB.py", line 123, in main
+    dl_train, dl_val = build_loaders(args)
+  File "/home/rmosad/surgical-video-segmentation-/src/training/train_EB.py", line 50, in build_loaders
+    ds_train = DSADDataset(args.data_root, args.images_subdir, args.masks_subdir, list_file=args.list_train, img_size=args.img_size, augment=True)
+  File "/home/rmosad/surgical-video-segmentation-/src/data/dsad_dataset.py", line 63, in __init__
+    raise RuntimeError(
+RuntimeError: No pairs matched the provided list file: /home/rmosad/DSAD_pped/set3/multilabel/splits/train.txt

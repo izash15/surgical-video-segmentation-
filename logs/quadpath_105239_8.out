@@ -1,0 +1,120 @@
+Organ: small_intestine
+Host: gpuhuang
+Python: /home/rmosad/.conda/envs/svs2/bin/python
+GPU:
+Thu Apr  9 17:56:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:0B:00.0 Off |                    0 |
+| N/A   32C    P8             34W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+mmcv + MiTB0Encoder + QuadPathUNetStacked import OK
+Model params: 33.82M
+[epoch 1] train_loss=0.7022 val_loss=0.5499 mIoU=0.6861 mDice~=0.7884 MASD=11.7807 NSD=0.5641
+** New best mIoU: 0.6861. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 2] train_loss=0.4526 val_loss=0.4343 mIoU=0.7227 mDice~=0.8177 MASD=10.3359 NSD=0.6325
+** New best mIoU: 0.7227. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 3] train_loss=0.3521 val_loss=0.3607 mIoU=0.7399 mDice~=0.8303 MASD=9.1480 NSD=0.6652
+** New best mIoU: 0.7399. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 4] train_loss=0.2775 val_loss=0.3364 mIoU=0.7478 mDice~=0.8366 MASD=9.6853 NSD=0.6910
+** New best mIoU: 0.7478. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 5] train_loss=0.2275 val_loss=0.3080 mIoU=0.7526 mDice~=0.8425 MASD=9.3137 NSD=0.6914
+** New best mIoU: 0.7526. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 6] train_loss=0.1930 val_loss=0.2959 mIoU=0.7361 mDice~=0.8204 MASD=11.1898 NSD=0.6871
+[epoch 7] train_loss=0.1647 val_loss=0.2412 mIoU=0.7738 mDice~=0.8581 MASD=8.6329 NSD=0.7243
+** New best mIoU: 0.7738. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 8] train_loss=0.1381 val_loss=0.2301 mIoU=0.7889 mDice~=0.8669 MASD=6.9808 NSD=0.7435
+** New best mIoU: 0.7889. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 9] train_loss=0.1278 val_loss=0.2290 mIoU=0.7580 mDice~=0.8377 MASD=8.0397 NSD=0.7236
+[epoch 10] train_loss=0.1173 val_loss=0.2398 mIoU=0.7493 mDice~=0.8283 MASD=7.7950 NSD=0.7270
+[epoch 11] train_loss=0.1071 val_loss=0.2313 mIoU=0.7863 mDice~=0.8676 MASD=7.7964 NSD=0.7427
+[epoch 12] train_loss=0.0944 val_loss=0.2155 mIoU=0.7789 mDice~=0.8597 MASD=7.1619 NSD=0.7416
+[epoch 13] train_loss=0.0860 val_loss=0.1916 mIoU=0.7933 mDice~=0.8723 MASD=7.2738 NSD=0.7520
+** New best mIoU: 0.7933. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 14] train_loss=0.0765 val_loss=0.1964 mIoU=0.8000 mDice~=0.8768 MASD=7.7640 NSD=0.7661
+** New best mIoU: 0.8000. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 15] train_loss=0.0773 val_loss=0.2050 mIoU=0.7923 mDice~=0.8707 MASD=7.3837 NSD=0.7538
+[epoch 16] train_loss=0.0700 val_loss=0.2233 mIoU=0.7850 mDice~=0.8637 MASD=7.7337 NSD=0.7584
+[epoch 17] train_loss=0.0715 val_loss=0.2076 mIoU=0.7904 mDice~=0.8678 MASD=8.0735 NSD=0.7506
+[epoch 18] train_loss=0.0642 val_loss=0.1913 mIoU=0.7963 mDice~=0.8728 MASD=7.2197 NSD=0.7701
+[epoch 19] train_loss=0.0605 val_loss=0.2091 mIoU=0.7822 mDice~=0.8615 MASD=7.3674 NSD=0.7511
+[epoch 20] train_loss=0.0600 val_loss=0.1895 mIoU=0.7996 mDice~=0.8769 MASD=7.5906 NSD=0.7651
+[epoch 21] train_loss=0.0577 val_loss=0.2129 mIoU=0.7921 mDice~=0.8689 MASD=7.4982 NSD=0.7619
+[epoch 22] train_loss=0.0577 val_loss=0.1992 mIoU=0.7926 mDice~=0.8721 MASD=7.6451 NSD=0.7592
+[epoch 23] train_loss=0.0520 val_loss=0.2002 mIoU=0.7971 mDice~=0.8722 MASD=6.4662 NSD=0.7742
+[epoch 24] train_loss=0.0503 val_loss=0.2105 mIoU=0.7915 mDice~=0.8692 MASD=7.4055 NSD=0.7653
+[epoch 25] train_loss=0.0484 val_loss=0.2075 mIoU=0.7903 mDice~=0.8672 MASD=6.7774 NSD=0.7710
+[epoch 26] train_loss=0.0479 val_loss=0.1987 mIoU=0.7981 mDice~=0.8739 MASD=7.2609 NSD=0.7713
+[epoch 27] train_loss=0.0472 val_loss=0.2144 mIoU=0.7948 mDice~=0.8720 MASD=7.7055 NSD=0.7675
+[epoch 28] train_loss=0.0434 val_loss=0.2086 mIoU=0.8010 mDice~=0.8770 MASD=7.2982 NSD=0.7786
+** New best mIoU: 0.8010. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 29] train_loss=0.0423 val_loss=0.2593 mIoU=0.7722 mDice~=0.8479 MASD=8.0584 NSD=0.7596
+[epoch 30] train_loss=0.0439 val_loss=0.2663 mIoU=0.7638 mDice~=0.8413 MASD=7.9584 NSD=0.7472
+[epoch 31] train_loss=0.0441 val_loss=0.2223 mIoU=0.7981 mDice~=0.8735 MASD=7.2330 NSD=0.7777
+[epoch 32] train_loss=0.0413 val_loss=0.2029 mIoU=0.8047 mDice~=0.8800 MASD=6.9263 NSD=0.7741
+** New best mIoU: 0.8047. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 33] train_loss=0.0457 val_loss=0.2049 mIoU=0.8033 mDice~=0.8771 MASD=6.9499 NSD=0.7798
+[epoch 34] train_loss=0.0407 val_loss=0.2097 mIoU=0.8017 mDice~=0.8769 MASD=7.3890 NSD=0.7756
+[epoch 35] train_loss=0.0399 val_loss=0.2419 mIoU=0.7781 mDice~=0.8539 MASD=8.0350 NSD=0.7594
+[epoch 36] train_loss=0.0390 val_loss=0.2217 mIoU=0.7906 mDice~=0.8672 MASD=7.8626 NSD=0.7681
+[epoch 37] train_loss=0.0379 val_loss=0.2279 mIoU=0.7959 mDice~=0.8716 MASD=7.4708 NSD=0.7733
+[epoch 38] train_loss=0.0366 val_loss=0.2294 mIoU=0.7959 mDice~=0.8704 MASD=7.2239 NSD=0.7751
+[epoch 39] train_loss=0.0358 val_loss=0.2195 mIoU=0.7991 mDice~=0.8732 MASD=7.5926 NSD=0.7764
+[epoch 40] train_loss=0.0343 val_loss=0.2369 mIoU=0.7889 mDice~=0.8691 MASD=9.3508 NSD=0.7562
+[epoch 41] train_loss=0.0349 val_loss=0.2311 mIoU=0.7909 mDice~=0.8653 MASD=7.0591 NSD=0.7708
+[epoch 42] train_loss=0.0330 val_loss=0.2255 mIoU=0.7977 mDice~=0.8706 MASD=7.4372 NSD=0.7768
+[epoch 43] train_loss=0.0344 val_loss=0.2244 mIoU=0.7964 mDice~=0.8720 MASD=7.5833 NSD=0.7668
+[epoch 44] train_loss=0.0320 val_loss=0.2335 mIoU=0.7954 mDice~=0.8696 MASD=6.9825 NSD=0.7749
+[epoch 45] train_loss=0.0327 val_loss=0.2314 mIoU=0.7974 mDice~=0.8730 MASD=8.2603 NSD=0.7676
+[epoch 46] train_loss=0.0326 val_loss=0.2330 mIoU=0.7992 mDice~=0.8735 MASD=7.1902 NSD=0.7752
+[epoch 47] train_loss=0.0317 val_loss=0.2371 mIoU=0.7937 mDice~=0.8689 MASD=7.5832 NSD=0.7687
+[epoch 48] train_loss=0.0314 val_loss=0.2174 mIoU=0.7962 mDice~=0.8714 MASD=7.2065 NSD=0.7684
+[epoch 49] train_loss=0.0297 val_loss=0.2158 mIoU=0.8078 mDice~=0.8802 MASD=6.5622 NSD=0.7824
+** New best mIoU: 0.8078. Saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+[epoch 50] train_loss=0.0289 val_loss=0.2263 mIoU=0.8026 mDice~=0.8761 MASD=6.9077 NSD=0.7783
+[epoch 51] train_loss=0.0301 val_loss=0.2460 mIoU=0.7895 mDice~=0.8639 MASD=7.2225 NSD=0.7709
+[epoch 52] train_loss=0.0285 val_loss=0.2339 mIoU=0.7982 mDice~=0.8713 MASD=7.0893 NSD=0.7742
+[epoch 53] train_loss=0.0283 val_loss=0.2471 mIoU=0.7937 mDice~=0.8680 MASD=7.4406 NSD=0.7715
+[epoch 54] train_loss=0.0275 val_loss=0.2314 mIoU=0.8068 mDice~=0.8813 MASD=7.0568 NSD=0.7766
+[epoch 55] train_loss=0.0272 val_loss=0.2388 mIoU=0.8006 mDice~=0.8748 MASD=7.1279 NSD=0.7740
+[epoch 56] train_loss=0.0267 val_loss=0.2422 mIoU=0.8027 mDice~=0.8768 MASD=6.8291 NSD=0.7757
+[epoch 57] train_loss=0.0265 val_loss=0.2451 mIoU=0.8016 mDice~=0.8763 MASD=6.8997 NSD=0.7764
+[epoch 58] train_loss=0.0263 val_loss=0.2575 mIoU=0.7948 mDice~=0.8702 MASD=7.4384 NSD=0.7689
+[epoch 59] train_loss=0.0266 val_loss=0.2460 mIoU=0.7995 mDice~=0.8733 MASD=6.9598 NSD=0.7743
+[epoch 60] train_loss=0.0262 val_loss=0.2546 mIoU=0.7969 mDice~=0.8713 MASD=7.0356 NSD=0.7721
+[epoch 61] train_loss=0.0253 val_loss=0.2526 mIoU=0.7956 mDice~=0.8706 MASD=7.1496 NSD=0.7705
+[epoch 62] train_loss=0.0251 val_loss=0.2531 mIoU=0.7983 mDice~=0.8728 MASD=7.0130 NSD=0.7732
+[epoch 63] train_loss=0.0248 val_loss=0.2502 mIoU=0.7976 mDice~=0.8726 MASD=6.9217 NSD=0.7705
+[epoch 64] train_loss=0.0250 val_loss=0.2551 mIoU=0.7996 mDice~=0.8745 MASD=7.1818 NSD=0.7723
+[epoch 65] train_loss=0.0245 val_loss=0.2504 mIoU=0.7984 mDice~=0.8737 MASD=7.2160 NSD=0.7696
+[epoch 66] train_loss=0.0241 val_loss=0.2477 mIoU=0.7988 mDice~=0.8739 MASD=7.0261 NSD=0.7708
+[epoch 67] train_loss=0.0243 val_loss=0.2564 mIoU=0.7976 mDice~=0.8727 MASD=7.1324 NSD=0.7712
+[epoch 68] train_loss=0.0237 val_loss=0.2551 mIoU=0.7973 mDice~=0.8725 MASD=6.9938 NSD=0.7706
+[epoch 69] train_loss=0.0237 val_loss=0.2505 mIoU=0.7993 mDice~=0.8740 MASD=6.7535 NSD=0.7732
+[epoch 70] train_loss=0.0234 val_loss=0.2577 mIoU=0.7983 mDice~=0.8729 MASD=6.9726 NSD=0.7718
+[epoch 71] train_loss=0.0233 val_loss=0.2559 mIoU=0.7983 mDice~=0.8729 MASD=6.9563 NSD=0.7722
+[epoch 72] train_loss=0.0233 val_loss=0.2543 mIoU=0.7963 mDice~=0.8713 MASD=7.0826 NSD=0.7714
+[epoch 73] train_loss=0.0231 val_loss=0.2553 mIoU=0.7986 mDice~=0.8735 MASD=7.1091 NSD=0.7721
+[epoch 74] train_loss=0.0232 val_loss=0.2577 mIoU=0.7964 mDice~=0.8716 MASD=7.1021 NSD=0.7700
+[epoch 75] train_loss=0.0232 val_loss=0.2660 mIoU=0.7977 mDice~=0.8726 MASD=7.1441 NSD=0.7712
+[epoch 76] train_loss=0.0235 val_loss=0.2548 mIoU=0.7975 mDice~=0.8723 MASD=7.1408 NSD=0.7712
+[epoch 77] train_loss=0.0230 val_loss=0.2601 mIoU=0.7979 mDice~=0.8728 MASD=7.0773 NSD=0.7708
+[epoch 78] train_loss=0.0228 val_loss=0.2545 mIoU=0.7973 mDice~=0.8723 MASD=7.0915 NSD=0.7712
+[epoch 79] train_loss=0.0230 val_loss=0.2618 mIoU=0.7980 mDice~=0.8730 MASD=7.1351 NSD=0.7709
+[epoch 80] train_loss=0.0229 val_loss=0.2606 mIoU=0.7977 mDice~=0.8728 MASD=7.1338 NSD=0.7712
+Training done. Best mIoU=0.8078. Best ckpt: /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/best_QuadPath.ckpt
+Logs saved to /home/rmosad/surgical-video-segmentation-/experiments/set3QuadPathStacked/QuadPathStacked_256_small_intestineE80/20260409-175628
