@@ -1,0 +1,120 @@
+Organ: ureter
+Host: gpu03
+Python: /home/idavis3/miniconda3/envs/svs/bin/python
+GPU:
+Mon Apr 27 23:11:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:E1:00.0 Off |                    0 |
+| N/A   26C    P8             33W /  350W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+ViTSolo import OK
+Model params: 33.82M
+[epoch 1] train_loss=0.9324 val_loss=0.8193 mIoU=0.0000 mDice~=0.0000 MASD=102.9093 NSD=0.0000
+** New best mIoU: 0.0000. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 2] train_loss=0.7642 val_loss=0.7398 mIoU=0.0285 mDice~=0.0507 MASD=66.2205 NSD=0.0444
+** New best mIoU: 0.0285. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 3] train_loss=0.6890 val_loss=0.6858 mIoU=0.1073 mDice~=0.1726 MASD=54.2435 NSD=0.1523
+** New best mIoU: 0.1073. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 4] train_loss=0.6147 val_loss=0.6331 mIoU=0.1262 mDice~=0.2099 MASD=45.0056 NSD=0.1452
+** New best mIoU: 0.1262. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 5] train_loss=0.5491 val_loss=0.5566 mIoU=0.2048 mDice~=0.2924 MASD=30.8990 NSD=0.2104
+** New best mIoU: 0.2048. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 6] train_loss=0.4887 val_loss=0.5099 mIoU=0.2921 mDice~=0.3968 MASD=21.5348 NSD=0.3156
+** New best mIoU: 0.2921. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 7] train_loss=0.4301 val_loss=0.4815 mIoU=0.2685 mDice~=0.3765 MASD=20.4404 NSD=0.2932
+[epoch 8] train_loss=0.3771 val_loss=0.4409 mIoU=0.3106 mDice~=0.4202 MASD=21.3622 NSD=0.3733
+** New best mIoU: 0.3106. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 9] train_loss=0.3181 val_loss=0.4320 mIoU=0.2850 mDice~=0.3713 MASD=22.9965 NSD=0.3357
+[epoch 10] train_loss=0.2733 val_loss=0.4355 mIoU=0.2225 mDice~=0.3016 MASD=24.9654 NSD=0.2811
+[epoch 11] train_loss=0.2379 val_loss=0.3762 mIoU=0.3045 mDice~=0.4025 MASD=20.9520 NSD=0.3696
+[epoch 12] train_loss=0.2067 val_loss=0.3879 mIoU=0.2581 mDice~=0.3494 MASD=21.1340 NSD=0.3272
+[epoch 13] train_loss=0.1817 val_loss=0.3601 mIoU=0.2938 mDice~=0.3817 MASD=20.8067 NSD=0.3536
+[epoch 14] train_loss=0.1702 val_loss=0.3344 mIoU=0.3394 mDice~=0.4458 MASD=23.9793 NSD=0.4130
+** New best mIoU: 0.3394. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 15] train_loss=0.1525 val_loss=0.3389 mIoU=0.3175 mDice~=0.4197 MASD=25.9033 NSD=0.3857
+[epoch 16] train_loss=0.1426 val_loss=0.3599 mIoU=0.2790 mDice~=0.3624 MASD=19.8826 NSD=0.3496
+[epoch 17] train_loss=0.1350 val_loss=0.3250 mIoU=0.3311 mDice~=0.4247 MASD=20.0815 NSD=0.4099
+[epoch 18] train_loss=0.1309 val_loss=0.3211 mIoU=0.3440 mDice~=0.4445 MASD=21.2066 NSD=0.4162
+** New best mIoU: 0.3440. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 19] train_loss=0.1213 val_loss=0.3516 mIoU=0.2829 mDice~=0.3655 MASD=23.6860 NSD=0.3435
+[epoch 20] train_loss=0.1145 val_loss=0.3617 mIoU=0.2667 mDice~=0.3516 MASD=22.2883 NSD=0.3342
+[epoch 21] train_loss=0.1093 val_loss=0.3378 mIoU=0.2987 mDice~=0.3957 MASD=22.9118 NSD=0.3839
+[epoch 22] train_loss=0.1041 val_loss=0.3715 mIoU=0.2528 mDice~=0.3273 MASD=28.6697 NSD=0.3133
+[epoch 23] train_loss=0.0998 val_loss=0.3092 mIoU=0.3504 mDice~=0.4511 MASD=21.0287 NSD=0.4377
+** New best mIoU: 0.3504. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 24] train_loss=0.0933 val_loss=0.3483 mIoU=0.2890 mDice~=0.3686 MASD=22.9550 NSD=0.3526
+[epoch 25] train_loss=0.0941 val_loss=0.2996 mIoU=0.3608 mDice~=0.4621 MASD=18.6401 NSD=0.4515
+** New best mIoU: 0.3608. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 26] train_loss=0.0930 val_loss=0.3733 mIoU=0.2352 mDice~=0.3131 MASD=22.2745 NSD=0.2977
+[epoch 27] train_loss=0.0901 val_loss=0.3243 mIoU=0.3145 mDice~=0.4026 MASD=22.8087 NSD=0.3931
+[epoch 28] train_loss=0.0847 val_loss=0.3074 mIoU=0.3458 mDice~=0.4411 MASD=20.4390 NSD=0.4281
+[epoch 29] train_loss=0.0825 val_loss=0.3365 mIoU=0.2954 mDice~=0.3826 MASD=20.9294 NSD=0.3705
+[epoch 30] train_loss=0.0810 val_loss=0.3216 mIoU=0.3165 mDice~=0.4082 MASD=20.8486 NSD=0.3935
+[epoch 31] train_loss=0.0761 val_loss=0.3018 mIoU=0.3563 mDice~=0.4550 MASD=20.5879 NSD=0.4420
+[epoch 32] train_loss=0.0773 val_loss=0.3279 mIoU=0.3116 mDice~=0.4021 MASD=20.0145 NSD=0.3931
+[epoch 33] train_loss=0.0753 val_loss=0.3421 mIoU=0.2920 mDice~=0.3760 MASD=22.5309 NSD=0.3666
+[epoch 34] train_loss=0.0757 val_loss=0.3182 mIoU=0.3268 mDice~=0.4176 MASD=21.5869 NSD=0.4083
+[epoch 35] train_loss=0.0706 val_loss=0.3070 mIoU=0.3484 mDice~=0.4467 MASD=21.4892 NSD=0.4449
+[epoch 36] train_loss=0.0706 val_loss=0.3157 mIoU=0.3359 mDice~=0.4272 MASD=24.4600 NSD=0.4197
+[epoch 37] train_loss=0.0679 val_loss=0.3054 mIoU=0.3526 mDice~=0.4469 MASD=21.6778 NSD=0.4488
+[epoch 38] train_loss=0.0665 val_loss=0.3028 mIoU=0.3584 mDice~=0.4570 MASD=20.8452 NSD=0.4562
+[epoch 39] train_loss=0.0634 val_loss=0.3239 mIoU=0.3165 mDice~=0.4087 MASD=19.7717 NSD=0.4018
+[epoch 40] train_loss=0.0624 val_loss=0.3230 mIoU=0.3196 mDice~=0.4120 MASD=22.1975 NSD=0.3987
+[epoch 41] train_loss=0.0586 val_loss=0.2955 mIoU=0.3637 mDice~=0.4673 MASD=16.7021 NSD=0.4600
+** New best mIoU: 0.3637. Saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+[epoch 42] train_loss=0.0583 val_loss=0.3275 mIoU=0.3132 mDice~=0.4064 MASD=19.3144 NSD=0.3996
+[epoch 43] train_loss=0.0583 val_loss=0.3193 mIoU=0.3243 mDice~=0.4174 MASD=19.6489 NSD=0.4091
+[epoch 44] train_loss=0.0581 val_loss=0.3261 mIoU=0.3165 mDice~=0.4044 MASD=19.5694 NSD=0.3897
+[epoch 45] train_loss=0.0537 val_loss=0.3653 mIoU=0.2574 mDice~=0.3387 MASD=22.8781 NSD=0.3300
+[epoch 46] train_loss=0.0545 val_loss=0.3295 mIoU=0.3083 mDice~=0.3975 MASD=21.6094 NSD=0.3897
+[epoch 47] train_loss=0.0528 val_loss=0.3244 mIoU=0.3177 mDice~=0.4114 MASD=19.3981 NSD=0.4043
+[epoch 48] train_loss=0.0507 val_loss=0.3167 mIoU=0.3324 mDice~=0.4255 MASD=21.1895 NSD=0.4212
+[epoch 49] train_loss=0.0490 val_loss=0.3149 mIoU=0.3338 mDice~=0.4279 MASD=20.1682 NSD=0.4223
+[epoch 50] train_loss=0.0479 val_loss=0.3126 mIoU=0.3400 mDice~=0.4354 MASD=20.2257 NSD=0.4324
+[epoch 51] train_loss=0.0482 val_loss=0.3059 mIoU=0.3506 mDice~=0.4491 MASD=19.6522 NSD=0.4438
+[epoch 52] train_loss=0.0465 val_loss=0.3008 mIoU=0.3610 mDice~=0.4611 MASD=18.7101 NSD=0.4569
+[epoch 53] train_loss=0.0466 val_loss=0.3178 mIoU=0.3301 mDice~=0.4260 MASD=18.9814 NSD=0.4166
+[epoch 54] train_loss=0.0458 val_loss=0.3264 mIoU=0.3167 mDice~=0.4094 MASD=18.3525 NSD=0.4020
+[epoch 55] train_loss=0.0439 val_loss=0.3200 mIoU=0.3242 mDice~=0.4204 MASD=19.2373 NSD=0.4122
+[epoch 56] train_loss=0.0429 val_loss=0.3167 mIoU=0.3278 mDice~=0.4265 MASD=19.6788 NSD=0.4229
+[epoch 57] train_loss=0.0418 val_loss=0.3157 mIoU=0.3357 mDice~=0.4318 MASD=19.1373 NSD=0.4273
+[epoch 58] train_loss=0.0412 val_loss=0.3085 mIoU=0.3467 mDice~=0.4473 MASD=20.8227 NSD=0.4438
+[epoch 59] train_loss=0.0421 val_loss=0.3063 mIoU=0.3441 mDice~=0.4471 MASD=18.7273 NSD=0.4433
+[epoch 60] train_loss=0.0422 val_loss=0.3112 mIoU=0.3390 mDice~=0.4383 MASD=20.3588 NSD=0.4264
+[epoch 61] train_loss=0.0400 val_loss=0.3143 mIoU=0.3341 mDice~=0.4324 MASD=18.9239 NSD=0.4253
+[epoch 62] train_loss=0.0390 val_loss=0.3090 mIoU=0.3426 mDice~=0.4426 MASD=19.1866 NSD=0.4357
+[epoch 63] train_loss=0.0388 val_loss=0.3059 mIoU=0.3474 mDice~=0.4485 MASD=18.6438 NSD=0.4442
+[epoch 64] train_loss=0.0382 val_loss=0.3137 mIoU=0.3364 mDice~=0.4332 MASD=19.5876 NSD=0.4277
+[epoch 65] train_loss=0.0383 val_loss=0.3176 mIoU=0.3288 mDice~=0.4251 MASD=20.2485 NSD=0.4179
+[epoch 66] train_loss=0.0363 val_loss=0.3224 mIoU=0.3217 mDice~=0.4175 MASD=19.8842 NSD=0.4094
+[epoch 67] train_loss=0.0371 val_loss=0.3122 mIoU=0.3386 mDice~=0.4372 MASD=19.6082 NSD=0.4316
+[epoch 68] train_loss=0.0366 val_loss=0.3284 mIoU=0.3123 mDice~=0.4067 MASD=20.3621 NSD=0.4023
+[epoch 69] train_loss=0.0365 val_loss=0.3177 mIoU=0.3301 mDice~=0.4287 MASD=19.9366 NSD=0.4235
+[epoch 70] train_loss=0.0373 val_loss=0.3117 mIoU=0.3396 mDice~=0.4398 MASD=20.1357 NSD=0.4355
+[epoch 71] train_loss=0.0368 val_loss=0.3163 mIoU=0.3321 mDice~=0.4302 MASD=20.0830 NSD=0.4266
+[epoch 72] train_loss=0.0354 val_loss=0.3110 mIoU=0.3415 mDice~=0.4412 MASD=19.7509 NSD=0.4373
+[epoch 73] train_loss=0.0354 val_loss=0.3190 mIoU=0.3279 mDice~=0.4253 MASD=20.0415 NSD=0.4205
+[epoch 74] train_loss=0.0355 val_loss=0.3161 mIoU=0.3326 mDice~=0.4307 MASD=20.2834 NSD=0.4251
+[epoch 75] train_loss=0.0346 val_loss=0.3169 mIoU=0.3318 mDice~=0.4300 MASD=21.0808 NSD=0.4262
+[epoch 76] train_loss=0.0352 val_loss=0.3179 mIoU=0.3301 mDice~=0.4277 MASD=20.0371 NSD=0.4239
+[epoch 77] train_loss=0.0348 val_loss=0.3198 mIoU=0.3276 mDice~=0.4248 MASD=20.6566 NSD=0.4185
+[epoch 78] train_loss=0.0355 val_loss=0.3172 mIoU=0.3319 mDice~=0.4296 MASD=20.1924 NSD=0.4250
+[epoch 79] train_loss=0.0356 val_loss=0.3198 mIoU=0.3279 mDice~=0.4250 MASD=20.4887 NSD=0.4195
+[epoch 80] train_loss=0.0361 val_loss=0.3195 mIoU=0.3279 mDice~=0.4251 MASD=20.2028 NSD=0.4195
+Training done. Best mIoU=0.3637. Best ckpt: /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/best_QuadPath.ckpt
+Logs saved to /home/idavis3/surgical-video-segmentation-/experiments/set3ViTSolo/ViTSolo_256_ureterE80/20260427-231150
