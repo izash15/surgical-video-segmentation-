@@ -5,7 +5,9 @@
 *.pt
 
 # Training outputs
-experiments/
+/experiments/set3QuadPathStacked
+/experiments/set3TriPathStacked
+/experiments/set3UNet
 /src/data/BundleTripathTrain.sh
 /src/data/train_tripath_array.sbatch
 /src/data/preprocess.sh
