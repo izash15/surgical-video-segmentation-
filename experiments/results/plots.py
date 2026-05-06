@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-output_dir = "/home/rmosad/surgical-video-segmentation-/experiments/plots/"
+output_dir = "./experiments/plots/"
 os.makedirs(output_dir, exist_ok=True)
 
 # ----------------------------------------------------
